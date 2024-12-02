@@ -70,11 +70,23 @@ public class Main {
          String firstPart = s.substring(0, i);
          // get the last part of the string
          String lastPart = s.substring(i+1, s.length());
-         // replace character in s
+         // re-assign the String to a new version of it, with 'a' replaced
          s = firstPart + "@" + lastPart;
-         System.out.println("String after find & replace: " + s);
       }
+      System.out.println("String after find & replace: " + s);
 
+      // FOR loop --> reverse all characters of a String
+      // Use a FOR loop when you want to visit every character
+      // Loop BACKWARDS as we build a new string
+      int finalIndex = s.length() - 1;
+      String reversedS = "";
+      for (int index = finalIndex; index >= 0; index--) {
+         // System.out.println("Current index: " + index);
+         // System.out.println("Letter at index: " + s.substring(index, index+1));
+         // Build our reversed version of String s
+         reversedS = reversedS + s.substring(index, index+1);
+      }
+      System.out.println("Reversed: " + reversedS);
 
 
 
